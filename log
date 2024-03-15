@@ -175,3 +175,57 @@ test.c:47:6: error: ‘readIntArray’ defined but not used [-Werror=unused-func
 cc1: all warnings being treated as errors
 Compilation failed
 52142ce
+Fri 15 Mar 2024 09:57:58 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:53:32: error: expected statement before ‘)’ token
+   53 |   for(int i = 0; i < size; i++))
+      |                                ^
+exercises.c:55:15: error: ‘i’ undeclared (first use in this function)
+   55 |       if((arr[i] % 2 == 0)
+      |               ^
+exercises.c:55:15: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:55:27: error: expected ‘)’ before ‘{’ token
+   55 |       if((arr[i] % 2 == 0)
+      |         ~                 ^
+      |                           )
+   56 |       {
+      |       ~                    
+exercises.c:60:5: error: expected expression before ‘}’ token
+   60 |     }
+      |     ^
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:81:33: error: expected statement before ‘)’ token
+   81 |   for(int i = 0; i < size1; i++))
+      |                                 ^
+exercises.c:83:31: error: ‘i’ undeclared (first use in this function)
+   83 |       result[contador] = arr1[i];
+      |                               ^
+exercises.c:86:33: error: expected statement before ‘)’ token
+   86 |   for(int i = 0; i < size2; i++))
+      |                                 ^
+exercises.c:91:45: error: ‘ordenar’ undeclared (first use in this function)
+   91 |   qsort(result, size1 + size2, sizeof(int), ordenar);
+      |                                             ^~~~~~~
+test.c: In function ‘checkSorted’:
+test.c:382:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  382 | int main(int argc, char *argv[]) {
+      |     ^~~~
+test.c:410:1: error: expected declaration or statement at end of input
+  410 | }
+      | ^
+test.c:7:6: error: unused variable ‘msg’ [-Werror=unused-variable]
+    7 | char msg[300];
+      |      ^~~
+At top level:
+test.c:382:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  382 | int main(int argc, char *argv[]) {
+      |     ^~~~
+test.c:47:6: error: ‘readIntArray’ defined but not used [-Werror=unused-function]
+   47 | void readIntArray(int arr[], int *size) {
+      |      ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+82509d1
