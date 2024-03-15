@@ -52,9 +52,9 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
   int contador = 0;
   for(int i = 0; i < size; i++)
     {
-      if (arr[i] % 2 == 0)
+      if(arr[i] % 2 == 0)
       {
-        Newarreglo[contador] == arr[i];
+        Newarreglo[contador] = arr[i];
         contador++;
       }
     }
