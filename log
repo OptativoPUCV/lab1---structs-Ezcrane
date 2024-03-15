@@ -29,3 +29,17 @@ exercises.c:34:22: error: ‘i’ undeclared (first use in this function)
 exercises.c:34:22: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 95d96ad
+Fri 15 Mar 2024 12:19:22 PM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘reverseArray’:
+exercises.c:32:32: error: expected statement before ‘)’ token
+   32 |   for(int i = 0; i < size; i++))
+      |                                ^
+exercises.c:34:22: error: ‘i’ undeclared (first use in this function)
+   34 |       int temp = arr[i];
+      |                      ^
+exercises.c:34:22: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+8a4a65c

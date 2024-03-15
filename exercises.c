@@ -1,4 +1,4 @@
-a #include <ctype.h>
+#include <ctype.h>
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -24,7 +24,7 @@ int findMax(int arr[], int size)
 
 /*
 Ejercicio 2: Invertir un Arreglo
-Descripción: Escribe una función que tome un arreglo y su tamaño, y luego
+Descripción: Escribe una función que tome un arreglo y su tamaño,  luego
 invierta el orden de sus elementos.
 */
 void reverseArray(int arr[], int size) 
