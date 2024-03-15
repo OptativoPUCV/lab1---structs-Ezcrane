@@ -45,7 +45,22 @@ los números pares del arreglo original.
 newsize apunta a una dirección válida que no ha sido inicializada con nigún valor específico. 
 *newsize debe almacenar el tamaño del nuevo arreglo que se retorna.
 */
-int *filterEvenNumbers(int arr[], int size, int *newSize) { return NULL; }
+int *filterEvenNumbers(int arr[], int size, int *newSize) 
+{
+  int *Newarreglo = (int *)malloc(size * sizeof(*int));
+  if (Newarreglo == NULL) EXIT_FAILURE;
+  int contador = 0;
+  for(int i = 0; i < size; i++))
+    {
+      if((arr[i] % 2 == 0)
+      {
+        Newarreglo[contador] == arr[i];
+        contador++;
+      }
+    }
+  *newSize = contador;
+  return Newarreglo;
+}
 
 /*
 Ejercicio 4: Fusión de dos Arreglos Ordenados
@@ -53,8 +68,28 @@ Descripción: Escribe una función que tome dos arreglos
 ordenados de menor a mayor y sus tamaños, y luego fusione estos dos
 arreglos en un tercer arreglo también ordenado de menor a mayor.
 */
+int compare(const void *a, const void *b)
+{
+  return (*(int *)a - *(int *)b);
+}
+
+
 void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
-                       int result[]) {}
+                       int result[]) 
+{
+  int contador = 0;
+  for(int i = 0; i < size1; i++))
+    {
+      result[contador] = arr1[i];
+      contador++;
+    }
+  for(int i = 0; i < size2; i++))
+    {
+      result[contador] = arr2[i];
+      contador++;
+    }
+  qsort(result, size1 + size2, sizeof(int), ordenar);
+}
 
 /*
 Ejercicio 5: Comprobación de Ordenación
@@ -62,7 +97,10 @@ Descripción: Escribe una función que tome un arreglo y su tamaño,
 y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
   0 si no está ordenado, y -1 si está ordenado en orden descendente.
 */
-int checkSorted(int arr[], int size) { return -2; }
+int checkSorted(int arr[], int size) 
+{ 
+  return -2;
+
 
 /*
 Ejercicio 6: Información de una Biblioteca
