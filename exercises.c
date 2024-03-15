@@ -68,7 +68,7 @@ Descripción: Escribe una función que tome dos arreglos
 ordenados de menor a mayor y sus tamaños, y luego fusione estos dos
 arreglos en un tercer arreglo también ordenado de menor a mayor.
 */
-int compare(const void *a, const void *b)
+int ordenar(const void *a, const void *b)
 {
   return (*(int *)a - *(int *)b);
 }
@@ -78,12 +78,12 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
                        int result[]) 
 {
   int contador = 0;
-  for(int i = 0; i < size1; i++))
+  for(int i = 0; i < size1; i++)
     {
       result[contador] = arr1[i];
       contador++;
     }
-  for(int i = 0; i < size2; i++))
+  for(int i = 0; i < size2; i++)
     {
       result[contador] = arr2[i];
       contador++;
