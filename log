@@ -1,1 +1,31 @@
 
+Fri 15 Mar 2024 12:18:50 PM UTC: 
+ exercises.c | 23 +++++++++++++++++++++--
+ 1 file changed, 21 insertions(+), 2 deletions(-)
+In file included from test.c:1:
+exercises.c:1:3: error: stray ‘#’ in program
+    1 | a #include <ctype.h>
+      |   ^
+exercises.c:1:1: error: unknown type name ‘a’
+    1 | a #include <ctype.h>
+      | ^
+exercises.c:1:12: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
+    1 | a #include <ctype.h>
+      |            ^
+In file included from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdlib.h:395,
+                 from exercises.c:4,
+                 from test.c:1:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/sys/types.h:33:9: error: unknown type name ‘__u_char’
+   33 | typedef __u_char u_char;
+      |         ^~~~~~~~
+In file included from test.c:1:
+exercises.c: In function ‘reverseArray’:
+exercises.c:32:32: error: expected statement before ‘)’ token
+   32 |   for(int i = 0; i < size; i++))
+      |                                ^
+exercises.c:34:22: error: ‘i’ undeclared (first use in this function)
+   34 |       int temp = arr[i];
+      |                      ^
+exercises.c:34:22: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+95d96ad
