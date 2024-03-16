@@ -113,7 +113,7 @@ int checkSorted(int arr[], int size)
         descendente = 0;
       }
     }
-  if(ascendete == 1)
+  if(ascendente == 1)
   {
     return 1;
   }
