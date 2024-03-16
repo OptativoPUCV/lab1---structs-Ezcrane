@@ -386,3 +386,22 @@ Fri 15 Mar 2024 10:02:40 PM UTC:
  tests:  0|3
 total_score: 40/70
 955acb4
+Sat 16 Mar 2024 12:46:14 AM UTC: 
+ exercises.c | 30 +++++++++++++++++++++++++++++-
+ 1 file changed, 29 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:116:6: error: ‘ascendete’ undeclared (first use in this function); did you mean ‘ascendente’?
+  116 |   if(ascendete == 1)
+      |      ^~~~~~~~~
+      |      ascendente
+exercises.c:116:6: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:102:7: error: variable ‘ascendente’ set but not used [-Werror=unused-but-set-variable]
+  102 |   int ascendente = 1;
+      |       ^~~~~~~~~~
+exercises.c:128:1: error: control reaches end of non-void function [-Werror=return-type]
+  128 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+ecb95cd
